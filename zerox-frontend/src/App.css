@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.charging-station {
+  border: 2px solid #333;
+  padding: 10px;
+  margin: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+}
+
+.diamond {
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+}
+
+.star {
+  width: 100px;
+  height: 100px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+}
+
+.rectangle {
+  width: 150px;
+  height: 100px;
+}
+
+.charging-station.highlighted {
+  background-color: #e6f7ff;
+}
+
+.trucks {
+  margin-top: 20px;
+}
+
+.truck {
+  width: 60px;
+  height: 30px;
+  background-color: #808080;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
+.truck.dragging {
+  opacity: 0.5;
+}
