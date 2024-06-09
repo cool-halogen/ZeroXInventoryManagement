@@ -1,0 +1,26 @@
+name: Data Management Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  data_management:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.7'
+
+    - name: Bundle install
+      run: |
+        bundle install --jobs 4 --retry 3
+
+    - name: Run Rake task
+      run: bundle exec deploy:sort_and_deploy
